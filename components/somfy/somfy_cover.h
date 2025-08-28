@@ -61,7 +61,7 @@ public:
         sendCC1101Command(Command::Up);
       } else if (pos == COVER_CLOSED) {
         ESP_LOGI(TAG, "CLOSE");
-        sendCC1101Command(Command::Down);
+//        sendCC1101Command(Command::Down);
       } else {
         ESP_LOGI(TAG, "WAT");
       }
