@@ -48,7 +48,7 @@ public:
 
   void sendCC1101Command(Command command) {
     ELECHOUSE_cc1101.SetTx();
-    remote_->sendCommand(command, this->repeat_);
+//    remote_->sendCommand(command, this->repeat_);
     ELECHOUSE_cc1101.setSidle();
   }
 
@@ -61,7 +61,7 @@ public:
         sendCC1101Command(Command::Up);
       } else if (pos == COVER_CLOSED) {
         ESP_LOGI(TAG, "CLOSE");
-//        sendCC1101Command(Command::Down);
+        sendCC1101Command(Command::Down);
       } else {
         ESP_LOGI(TAG, "WAT");
       }
